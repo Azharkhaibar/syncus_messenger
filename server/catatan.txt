@@ -1,0 +1,14 @@
+auth & users masih ada yg perlu di pertimbangkan ulang, relasi belum sepenuh nya di config
+
+websocket should implemented on 
+- messages
+- friends
+- groups/rooms
+- notification
+
+
+Ambil semua pesan private user → find({ where: { receiver: { id: userId } } }).
+
+Ambil semua pesan di room → find({ where: { room: { id: roomId } } }).
+
+cek method dto di service atau controller, kemungkinan ada yg berbdaa
