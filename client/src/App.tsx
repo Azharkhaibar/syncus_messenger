@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './index.css'
 import { Route, Routes } from 'react-router-dom'
+import { SyncusHomePage } from './features/homepage/pages/home'
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <Routes>
-      <Route></Route>
+      <Route path='/' element={<SyncusHomePage />} />
     </Routes>
   )
 }
