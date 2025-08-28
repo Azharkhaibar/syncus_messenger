@@ -13,7 +13,7 @@ export const SyncusHomePage: React.FC = () => {
                     </svg>
                 </div>
 
-                <div>
+                <div className="absolute top-[300px] left-1/2 transform -translate-x-1/2">
                     <ProfileIdentityFormDialog />
                 </div>
             </div>

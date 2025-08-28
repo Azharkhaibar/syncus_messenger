@@ -11,7 +11,10 @@ const ProfileIdentityFormDialog: React.FC = () => {
                     <form className="flex flex-col space-y-4 mt-6">
                         <input className="border border-gray-300 p-2 rounded-md" placeholder="Username..." />
                         <div>
-                            <GenderToggleHomePageDialog genderForm={gender} setGenderForm={setGender}  />
+                            <GenderToggleHomePageDialog genderForm={gender} setGenderForm={setGender} />
+                        </div>
+                        <div>
+                            
                         </div>
                     </form>
                 </div>
