@@ -2,6 +2,7 @@ import React from "react";
 import ProfileIdentityFormDialog from "../components/profileIdentityFormDialog";
 import { NavbarHomePage } from "../components/HomePageNavbar";
 import { HomePageBenefitFeatures, HomePageFeatureList } from "../assets/homepageIconAssets";
+import HomepageFooter from "../components/HomepageFooter";
 
 export const SyncusHomePage: React.FC = () => {
     return (
@@ -59,6 +60,8 @@ export const SyncusHomePage: React.FC = () => {
                         );
                     })}
                 </div>
+
+                <HomepageFooter />
 
             </div>
         </div>
