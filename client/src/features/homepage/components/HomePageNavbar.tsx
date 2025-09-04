@@ -8,7 +8,7 @@ export const NavbarHomePage: React.FC = () => {
                 <div><h2 className="text-4xl text-white font-bold">SyncUs</h2></div>
                 <div className="flex space-x-6 items-center">
                     <Link to="/login" className="text-white text-[20px]">Log in</Link>
-                    <Link to="/signup" className="text-white text-[20px]">Sign up</Link>
+                    <Link to="/signUp" className="text-white text-[20px]">Sign up</Link>
                 </div>
             </div>
         </div>

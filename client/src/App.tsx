@@ -2,7 +2,8 @@ import { useState } from 'react'
 import './index.css'
 import { Route, Routes } from 'react-router-dom'
 import { SyncusHomePage } from './features/homepage/pages/home'
-import { SignInPage } from './features/auth/pages/login'
+import { SignUpPage } from './features/auth/pages/signUp'
+import { SignInPage } from './features/auth/pages/signIn'
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<SyncusHomePage />} />
-      <Route path='/login' element={<SignInPage/>} />
+      <Route path='/signUp' element={<SignUpPage/>} />
+      <Route path='/signIn' element={<SignInPage />} />
     </Routes>
   )
 }

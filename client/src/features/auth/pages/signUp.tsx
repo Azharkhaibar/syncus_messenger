@@ -1,10 +1,13 @@
 import { NavbarHomePage } from "@/features/homepage/components/HomePageNavbar";
-import SignInForm from "../components/loginFormSignIn";
+import SignInForm from "../components/SignUpForm";
+import HomepageFooter from "@/features/homepage/components/HomepageFooter";
+import { BackPreviousAuth } from "@/shared/components/goPrevious/back";
 
-export const SignInPage = () => {
+export const SignUpPage = () => {
     return (
         <div className="w-full h-screen">
             <NavbarHomePage />
+            <BackPreviousAuth />
             <div className="px-[50px] flex gap-4">
                 <div className="w-1/2">
                     <h1 className="text-4xl font-semibold mt-10">Free Register</h1>
@@ -15,6 +18,7 @@ export const SignInPage = () => {
                     <h4>testing</h4>
                 </div>
             </div>
+            <HomepageFooter />
         </div>
     );
 }

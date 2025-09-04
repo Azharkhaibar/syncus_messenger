@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { data } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function CountriesApiServices() {
     const [countriesApi, setCountriesApi] = useState<string[]>([])
