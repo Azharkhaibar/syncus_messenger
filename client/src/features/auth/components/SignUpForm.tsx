@@ -59,18 +59,14 @@ export default function SignInForm() {
                     Register Now
                 </button>
 
-                {/* Or with */}
                 <div className="text-center text-sm text-gray-500">Or with</div>
 
-                {/* Social */}
                 <div className="flex space-x-2">
                     <button className="flex-1 border py-2 rounded-md">Google</button>
                     <button className="flex-1 bg-blue-600 text-white py-2 rounded-md">
                         Facebook
                     </button>
                 </div>
-
-                {/* Sign in */}
                 <p className="text-center text-sm text-gray-500">
                     Already have an account?{" "}
                     <Link to="/SignIn" className="text-blue-600 hover:underline">

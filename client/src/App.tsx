@@ -3,7 +3,8 @@ import './index.css'
 import { Route, Routes } from 'react-router-dom'
 import { SyncusHomePage } from './features/homepage/pages/home'
 import { SignUpPage } from './features/auth/pages/signUp'
-import { SignInPage } from './features/auth/pages/signIn'
+import { SignInPage } from './features/auth/pages/SignIn'
+import ChatLayout from './features/chat/layout/chatLayout'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path='/' element={<SyncusHomePage />} />
       <Route path='/signUp' element={<SignUpPage/>} />
       <Route path='/signIn' element={<SignInPage />} />
+      <Route path='/chat' element={<ChatLayout />} />
     </Routes>
   )
 }

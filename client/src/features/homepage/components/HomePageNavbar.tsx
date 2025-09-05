@@ -7,7 +7,7 @@ export const NavbarHomePage: React.FC = () => {
             <div className="p-5 flex items-center justify-between px-12">
                 <div><h2 className="text-4xl text-white font-bold">SyncUs</h2></div>
                 <div className="flex space-x-6 items-center">
-                    <Link to="/login" className="text-white text-[20px]">Log in</Link>
+                    <Link to="/signIn" className="text-white text-[20px]">Log in</Link>
                     <Link to="/signUp" className="text-white text-[20px]">Sign up</Link>
                 </div>
             </div>

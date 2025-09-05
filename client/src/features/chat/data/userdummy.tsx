@@ -1,0 +1,38 @@
+export const users = [
+  {
+    id: 1,
+    name: "Andini Sarasvati",
+    age: 20,
+    country: "aceh, indonesia",
+    gender: "♀",
+    flag: "🇮🇩",
+    time: "12:30",
+  },
+  {
+    id: 2,
+    name: "Dean",
+    age: 18,
+    country: "Yogyakarta, indonesia",
+    gender: "♂",
+    flag: "🇮🇩",
+    time: "12:30",
+  },
+  {
+    id: 3,
+    name: "Kanzar",
+    age: 18,
+    country: "Yogyakarta, indonesia",
+    gender: "♂",
+    flag: "🇮🇩",
+    time: "08:30",
+  },
+  {
+    id: 4,
+    name: "Alina",
+    age: 18,
+    country: "Yogyakarta, indonesia",
+    gender: "♀",
+    flag: "🇺🇸",
+    time: "08:30",
+  },
+];
