@@ -21,7 +21,7 @@ export class Auth {
   @Column({ nullable: true })
   reset_password_token?: string;
 
-  @Column({ name: 'user_id'})
+  @Column({ name: 'user_id' })
   user_id: number;
 
   @OneToOne(() => Users, (user) => user.auth, {

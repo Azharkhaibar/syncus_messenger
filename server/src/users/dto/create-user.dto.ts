@@ -5,6 +5,7 @@ import {
   IsString,
   IsNumber,
   IsEnum,
+  MinLength,
 } from 'class-validator';
 import { countryEnum, genderEnum } from '../interface/users.interface'; // sesuaikan path
 
@@ -31,5 +32,6 @@ export class CreateUserDto {
 
   @IsNotEmpty()
   @IsString()
+  @MinLength(20)
   password: string;
 }

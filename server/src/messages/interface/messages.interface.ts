@@ -5,7 +5,7 @@ export enum MessageStatusEnum {
 }
 
 export enum MessageTypeEnum {
-    TEXT = 'text',
-    IMAGE = 'image',
-    VIDEO = 'video',
+  TEXT = 'text',
+  IMAGE = 'image',
+  VIDEO = 'video',
 }

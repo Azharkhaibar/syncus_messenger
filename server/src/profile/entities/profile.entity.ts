@@ -28,8 +28,8 @@ export class Profile {
 
   @OneToOne(() => Users, (user) => user.profile, {
     onDelete: 'CASCADE',
-    nullable: true
+    nullable: true,
   })
-  @JoinColumn({ name: 'user_id'})
+  @JoinColumn({ name: 'user_id' })
   user: Users;
 }

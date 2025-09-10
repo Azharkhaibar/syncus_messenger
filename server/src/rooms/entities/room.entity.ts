@@ -49,7 +49,6 @@ export class Room {
   @ManyToOne(() => Users, (room) => room.created_rooms, {
     onDelete: 'CASCADE',
   })
-
   @OneToMany(() => RoomMember, (roomMember) => roomMember.room_member)
   roomMembers: RoomMember[];
 

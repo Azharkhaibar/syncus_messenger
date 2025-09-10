@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @tailwind utilities;
+
+/* Custom scrollbar for Sidebar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  border-radius: 9999px;
+}

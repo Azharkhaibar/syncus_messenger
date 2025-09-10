@@ -18,7 +18,7 @@ export enum UserStatus {
 export enum genderEnum {
   MALE = 'male',
   FEMALE = 'female',
-  OTHER = 'other'
+  OTHER = 'other',
 }
 
 export enum countryEnum {
@@ -209,5 +209,5 @@ export enum countryEnum {
   VIETNAM = 'Vietnam',
   YEMEN = 'Yemen',
   ZAMBIA = 'Zambia',
-  ZIMBABWE = 'Zimbabwe'
+  ZIMBABWE = 'Zimbabwe',
 }

@@ -1,4 +1,8 @@
-import { WebSocketGateway, SubscribeMessage, MessageBody } from '@nestjs/websockets';
+import {
+  WebSocketGateway,
+  SubscribeMessage,
+  MessageBody,
+} from '@nestjs/websockets';
 import { RoomMembersService } from './room_members.service';
 import { CreateRoomMemberDto } from './dto/create-room_member.dto';
 import { UpdateRoomMemberDto } from './dto/update-room_member.dto';
@@ -24,7 +28,10 @@ export class RoomMembersGateway {
 
   @SubscribeMessage('updateRoomMember')
   update(@MessageBody() updateRoomMemberDto: UpdateRoomMemberDto) {
-    return this.roomMembersService.update(updateRoomMemberDto.id, updateRoomMemberDto);
+    return this.roomMembersService.update(
+      updateRoomMemberDto.id,
+      updateRoomMemberDto,
+    );
   }
 
   @SubscribeMessage('removeRoomMember')

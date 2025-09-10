@@ -1,34 +1,51 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { users } from "../../data/userdummy";
 import SidebarItem from "./sidebarItem";
 import SidebarTabs from "./sidebarTabs";
-import TopTabs from "./topTabs";
+import TopTabs from "../bar/topTabs";
 import ResizeHandle from "../../function/resizeHandlerSidebar";
+import { groupsDummy } from "../../data/groupdummy";
+import { GroupSidebarItem } from "../groupsidebar/groupsidebaritem";
 
-const Sidebar = () => {
-  const [width, setWidth] = useState(288); // default w-72
+export interface sidebarItemTabsProps {
+  activeTabs: "chat" | "groups" | "ai";
+  setActiveTabs: (tab: "chat" | "groups" | "ai") => void;
+}
+
+const Sidebar: React.FC<sidebarItemTabsProps> = ({ activeTabs, setActiveTabs }) => {
+  const [width, setWidth] = useState(320);
+  const compact = width < 260;
 
   return (
     <aside
-      className="h-full border-r flex flex-col bg-white relative"
+      className="h-screen flex flex-col min-h-0 border-r bg-white relative"
       style={{ width: `${width}px` }}
     >
-      <TopTabs />
-      <SidebarTabs />
-      <div className="p-2">
-        <input
-          type="text"
-          placeholder="Search people"
-          className="w-full p-2 rounded border text-sm"
-        />
-      </div>
-      <div className="flex-1 overflow-y-auto">
-        {users.map((user) => (
-          <SidebarItem key={user.id} {...user} />
+      <TopTabs activeTabs={activeTabs} setActiveTabs={setActiveTabs} />
+      <SidebarTabs compact={compact} />
+
+      {!compact && (
+        <div className="p-2">
+          <input type="text"
+            placeholder={activeTabs === "groups" ? "Search group" : "search people"}
+            className="w-full p-2 rounded-full border text-sm focus:ring focus:ring-blue-200 outline-none"
+          />
+        </div>
+      )}
+
+      <div className="flex-1 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+        {activeTabs === "chat" && users.map((usr) => (
+          <SidebarItem key={usr.id} {...usr} compact={compact} />
         ))}
+        {activeTabs === "groups" && groupsDummy.map((grp) => (
+          <GroupSidebarItem key={grp.id} {...grp}  />
+        ))}
+
+        {activeTabs === "ai" && (
+          <div className="p-4 text-sm text-gray-500">AI Assistant coming soon 🤖</div>
+        )}
       </div>
 
-      {/* 🔹 Modular Resize */}
       <ResizeHandle onResize={setWidth} />
     </aside>
   );

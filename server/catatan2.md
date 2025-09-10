@@ -1,4 +1,5 @@
 Tabel Database yang Diperlukan
+
 ## 1. Rooms
 
 Mewakili ruang obrolan yang dapat dimasuki pengguna.
@@ -86,14 +87,15 @@ status (Pending, Accepted, dsb.)
 requested_at, accepted_at
 
 Bagaimana Relasi Antar Tabel:
-Tabel	Relasi ke
-Rooms	Categories, Regions
-RoomMembers	Rooms, Users
-Messages	Rooms, Users
-Media	Messages
-Friends	Users
+Tabel Relasi ke
+Rooms Categories, Regions
+RoomMembers Rooms, Users
+Messages Rooms, Users
+Media Messages
+Friends Users
 
 ## Completed Task
+
 - users (OK)
 - users profile (OK)
 - auth (?)

@@ -4,5 +4,5 @@ import { IsNumber } from 'class-validator';
 
 export class UpdateMessageDto extends PartialType(CreateMessageDto) {
   @IsNumber()
-  id: number; 
+  id: number;
 }

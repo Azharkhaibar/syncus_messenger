@@ -16,7 +16,10 @@ export class MessagesReadReceiptsService {
     return `This action returns a #${id} messagesReadReceipt`;
   }
 
-  update(id: number, updateMessagesReadReceiptDto: UpdateMessagesReadReceiptDto) {
+  update(
+    id: number,
+    updateMessagesReadReceiptDto: UpdateMessagesReadReceiptDto,
+  ) {
     return `This action updates a #${id} messagesReadReceipt`;
   }
 

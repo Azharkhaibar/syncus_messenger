@@ -8,6 +8,4 @@ export class CreateFriendDto {
   @IsNumber()
   @IsNotEmpty()
   friend_id: number;
-
-  
 }

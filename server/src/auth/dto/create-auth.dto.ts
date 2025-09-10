@@ -9,5 +9,3 @@ export class CreateAuthDto {
   @MinLength(8)
   password: string;
 }
-
-

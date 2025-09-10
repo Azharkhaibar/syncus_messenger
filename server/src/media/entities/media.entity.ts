@@ -24,6 +24,6 @@ export class Media {
   @IsUrl()
   url_media?: string;
 
-  @Column({ type: 'enum', enum: media_type, nullable: false})
+  @Column({ type: 'enum', enum: media_type, nullable: false })
   media_type: media_type;
 }

@@ -25,7 +25,7 @@ export class MessagesGateway {
 
   @SubscribeMessage('findAllMessages')
   findAll() {
-    return this.messagesService.findAll(); 
+    return this.messagesService.findAll();
   }
 
   @SubscribeMessage('findOneMessage')
